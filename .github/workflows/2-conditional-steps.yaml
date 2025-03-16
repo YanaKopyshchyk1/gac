@@ -1,6 +1,6 @@
 #https://github.com/misohu/github-actions-course/blob/main/.github/workflows/002_conditional-steps.yaml
 
-name: 2 Conditional Steps
+name: "2 Conditional steps"
 
 on: workflow_dispatch
 
