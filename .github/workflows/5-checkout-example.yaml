@@ -1,0 +1,21 @@
+#shared units of code,
+#allows to move code to the job machine in github
+#checkout actions
+
+name: "5 Checkout example"
+
+on:
+  workflow_dispatch:
+
+jobs:
+  demo-checkout:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "List space"
+        run: ls -la ${{ github.workspace }}
+
+      - name: "Checkout source code"
+        uses: actions/checkout@v4 #custom action
+
+      - name: "List space again"
+        run: ls -la ${{ github.workspace }}
