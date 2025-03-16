@@ -1,6 +1,6 @@
 #https://github.com/misohu/github-actions-course/blob/main/.github/workflows/006_passing_data_between_jobs.yaml
 
-name: "Passing data brtween jobs"
+name: "6 Passing data between jobs"
 
 on: workflow_dispatch
 
