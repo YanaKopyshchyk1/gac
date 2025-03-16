@@ -23,7 +23,7 @@ jobs:
           ls -la ${{ github.workspace }}/fe
 
       - name: "Upload artifacts"
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: coverage
           path: ${{ github.workspace }}/fe/.coverage
