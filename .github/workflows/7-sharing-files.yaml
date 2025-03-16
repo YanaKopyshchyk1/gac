@@ -18,5 +18,5 @@ jobs:
       - name: "Run tests"
         run: |
           cd fe
-          node --test
+          npm test
           ls -la ${{ github.workspace }}/fe
