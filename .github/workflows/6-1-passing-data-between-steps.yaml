@@ -1,0 +1,23 @@
+#::set-output - deprecated
+
+# use GITHUB_OUTPUT variable to pass data
+# in receiving step use ${{ steps.sender_step_name.outputs.output_name }}
+# to retrieve data
+
+#https://github.com/misohu/github-actions-course/blob/main/.github/workflows/006_passing_data_between_steps.yaml
+
+name: "6 Passing data between steps"
+
+on: workflow_dispatch
+
+jobs:
+  data-passing:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Create data"
+        id: "senderId" # need to be added if passing data
+        # this step will set the output name for this step to Yana
+        run: echo "name=Yana" >> $GITHUB_OUTPUT
+
+      - name: "Receive data"
+        run: echo ${{ steps.senderId.outputs.name }}

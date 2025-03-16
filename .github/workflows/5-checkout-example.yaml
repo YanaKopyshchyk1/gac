@@ -2,6 +2,8 @@
 #allows to move code to the job machine in github
 #checkout actions
 
+#https://github.com/misohu/github-actions-course/blob/main/.github/workflows/005_checkout_example.yaml
+
 name: "5 Checkout example"
 
 on:
