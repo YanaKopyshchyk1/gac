@@ -26,4 +26,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: coverage
-          path: ${{ github.workspace }}/fe/.coverage
+          path: ${{ github.workspace }}/fe/.coverage.txt
