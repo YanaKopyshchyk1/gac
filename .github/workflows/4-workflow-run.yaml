@@ -3,7 +3,7 @@
 name: "4 Workflow run"
 
 on:
-  workflow_run: :
+  workflow_run:
     workflows: ["4 Workflow dispatch"]
     type:
       - completed
