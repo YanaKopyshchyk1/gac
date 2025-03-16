@@ -1,0 +1,26 @@
+#https://github.com/misohu/github-actions-course/blob/main/.github/workflows/004_first_workflow.yaml
+
+name: "4 Workflow dispatch"
+
+on:
+  workflow_dispatch:
+    inputs:
+      username:
+        description: "Username"
+        default: "Yana"
+        required: true
+        type: string
+
+      age:
+        description: "Age"
+        required: true
+        type: number
+
+jobs:
+  echo-user-name:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Echo username and age"
+        run: |
+          echo "Username: ${{ inputs.username }}"
+          echo "Age: ${{ inputs.age }}"

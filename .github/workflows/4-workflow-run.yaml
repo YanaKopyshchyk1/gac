@@ -1,0 +1,16 @@
+#https://github.com/misohu/github-actions-course/blob/main/.github/workflows/004_second_workflow.yaml
+
+name: "4 Workflow run"
+
+on:
+  workflow_run: :
+    workflows: ["4 Workflow dispatch"]
+    type:
+      - completed
+
+jobs:
+  echo-hi-all:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Echo 'Hi all'"
+        run: echo "Hi all, I run after '4 Workflow dispatch'"

@@ -1,3 +1,5 @@
+#https://github.com/misohu/github-actions-course/blob/main/.github/workflows/003_parallel-examples.yaml
+
 name: "3 Parallel jobs"
 
 on: workflow_dispatch

@@ -1,0 +1,26 @@
+# on: push, pull_request
+
+# run workflow on specific time
+# * * * * * - POSIX cron syntax (at minimum once every 5 minute)
+schedule:
+  - cron: "23 0 * * 2"
+
+# minute 0-59
+# hour 0-23
+# day of the month (1-31 or JAN-DEC)
+# month (1-12)
+# day of the week (0-6 or SUN-SAT)
+
+# Cron expression examples
+# 30 14 * * * - this cron job runs a script every dat at 14:30
+# 45 3 * * 1 - every Monday at 3:45
+# */15 * * * * - every 15 minutes
+
+# runs on GitHub issue
+on:
+  issues:
+    types: [opened, edited, milestoned]
+
+# on: workflow_call - indicate that a workflow can be called by another workflow
+# on: workflow_dispatch - manually triggered, can pass params
+# on: workflow_run
