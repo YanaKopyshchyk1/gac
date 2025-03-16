@@ -1,0 +1,15 @@
+key1: "string value"
+key2: 42
+key3: true
+key4: false
+key5:
+  nested_key_5_1: nested string value
+key6_array:
+  - item1
+  - item2
+folder_style: >
+  This is folder
+  multiline string.
+literal_style: |
+  This is literal
+  multiline string.
