@@ -15,8 +15,15 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '21.x'
+
       - name: "Run tests"
         run: |
           cd fe
           npm test
           ls -la ${{ github.workspace }}/fe
+
+      - name: "Upload artifacts"
+        uses: actions/upload-artifact@v3
+        with:
+          name: coverage
+          path: ${{ github.workspace }}/fe/.coverage
