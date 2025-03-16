@@ -1,1 +1,22 @@
 #https://github.com/misohu/github-actions-course/blob/main/.github/workflows/006_passing_data_between_jobs.yaml
+
+name: "Passing data brtween jobs"
+
+on: workflow_dispatch
+
+jobs:
+  data-sender:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Create data"
+        id: "data-sender-step"
+        run: echo "name=Yana" >> $GITHUB_OUTPUT
+    outputs:
+      name: ${{ steps.data-sender.outputs.name }}
+
+  data-receiver:
+    runs-on: ubuntu-latest
+    needs: ["data-sender"] #job name
+    steps:
+      - name: "Receive data"
+        run: echo ${{ needs.data-sender.outputs.name }}
